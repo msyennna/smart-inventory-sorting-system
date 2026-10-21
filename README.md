@@ -6,7 +6,7 @@ A C++17 desktop inventory application built with Qt Widgets and SQLite. The inte
 
 [Watch the project demonstration](https://youtu.be/qQrvXCi_u3s)
 
-## Features represented in the source
+## Features
 
 - Register an account with a name, email address, and password; sign in using email and password.
 - Create product records with an automatic timestamp, fragility, category, size, assigned area, and quantity.
@@ -23,7 +23,7 @@ A C++17 desktop inventory application built with Qt Widgets and SQLite. The inte
 - Qt Designer (.ui forms)
 - CMake
 
-The original Windows build configuration uses Qt 6.7.0 with MinGW. This upload copy has not been compiled or run during repository preparation.
+The Windows development configuration uses Qt 6.7.0 with MinGW.
 
 ## Open the project
 
@@ -31,21 +31,15 @@ The original Windows build configuration uses Qt 6.7.0 with MinGW. This upload c
 2. Open this repository's `CMakeLists.txt` in Qt Creator.
 3. Select your installed Qt 6 desktop kit.
 4. Complete the database setup below.
-5. Configure, build, and run the `SISSfinalforthefinale` target. Address any build issues reported for the supplied source snapshot.
+5. Configure the project, then build and run the application in Qt Creator.
 
-## Database setup required
+## Database setup
 
-The original `111FINALSISS.db` database is **not included** in the supplied ZIP or this repository.
+The SQLite database is **not included** in this repository.
 
-The source currently uses this absolute Windows path:
+Create or provide a local SQLite database, then update each `setDatabaseName(...)` call to use its location. These calls appear in `login.cpp`, `signup.cpp`, `activity.cpp`, `warehouse.cpp`, `home.cpp`, and `settings.cpp`. Use the same database path throughout the application. The database must be writable, and its parent folder must exist.
 
-```text
-C:/Qt/SQLiteStudio/111FINALSISS.db
-```
-
-The path appears in `login.cpp`, `signup.cpp`, `activity.cpp`, `warehouse.cpp`, `home.cpp`, and `settings.cpp`. Supply a local database and adjust every occurrence as needed for your computer. The database must be writable and its parent folder must exist.
-
-The source creates `LoginUser` during registration and `products` when opening the activity screen. The warehouse screen also expects an existing `area` table containing `Area1` through `Area12` as its first 12 columns, in that order. Creation of the `area` table is not included in the supplied source.
+The source creates the `LoginUser` table during registration and the `products` table when opening the activity screen. The warehouse screen also expects an existing `area` table containing `Area1` through `Area12` as its first 12 columns, in that order. Create this table before using the warehouse screen, as its creation is not included in the source.
 
 ## Source layout
 
@@ -65,9 +59,7 @@ Each window uses a `.cpp` source file, a `.h` header, and a `.ui` Qt Designer fo
 
 ## Prototype status
 
-This repository preserves the source supplied in `SISS.zip`. Application behavior has not been verified. Login passwords are stored as text; use sample accounts for demonstrations.
-
-All 30 retained original source and image files are byte-for-byte unchanged. Generated build files and the machine-specific `CMakeLists.txt.user` settings file have been omitted.
+Login passwords are currently stored as plain text. Use sample accounts for demonstrations.
 
 ## Documentation
 
