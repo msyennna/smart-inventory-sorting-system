@@ -59,3 +59,7 @@ This repository preserves the application source as supplied. Runtime behavior h
 - `.gitignore`: excludes generated build output, Qt Creator local settings, and local databases.
 
 Generated build files and machine-specific Qt Creator settings have been omitted from this upload copy. All 28 retained original files are byte-for-byte unchanged.
+
+## Documentation
+
+[Read the project documentation (PDF)](SISS-Project-Documentation.pdf.pdf)
