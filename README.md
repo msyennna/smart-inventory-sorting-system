@@ -2,6 +2,10 @@
 
 A C++17 desktop inventory application built with Qt Widgets and SQLite. The interface supports product records, quantity tracking, and manual occupancy updates for 12 warehouse areas.
 
+## Demonstration
+
+[Watch the project demonstration](https://youtu.be/qQrvXCi_u3s)
+
 ## Features represented in the source
 
 - Register an account with a name, email address, and password; sign in using email and password.
@@ -64,3 +68,7 @@ Each window uses a `.cpp` source file, a `.h` header, and a `.ui` Qt Designer fo
 This repository preserves the source supplied in `SISS.zip`. Application behavior has not been verified. Login passwords are stored as text; use sample accounts for demonstrations.
 
 All 30 retained original source and image files are byte-for-byte unchanged. Generated build files and the machine-specific `CMakeLists.txt.user` settings file have been omitted.
+
+## Documentation
+
+[Read the project documentation (PDF)](SISS-Project-Documentation.pdf)
