@@ -14,16 +14,22 @@ class Settings : public QMainWindow
 public:
     explicit Settings(QWidget *parent = nullptr);
     ~Settings();
+    void setUsername(const QString& name);
+
 
 private slots:
+    void on_PBhome_clicked();
+
+    void on_PBwarehouse_clicked();
+
+    void on_PBactivity_clicked();
+
     void on_pushButton_clicked();
-
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
 
 private:
     Ui::Settings *ui;
+    static QString m_username; // Declare the static member variable
+    void showNameFromDatabase();
 };
 
 #endif // SETTINGS_H

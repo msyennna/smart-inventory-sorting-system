@@ -1,18 +1,20 @@
 #include "signup.h"
 #include "ui_signup.h"
-#include "mainwindow.h"
+
+#include "login.h"
 
 SignUp::SignUp(QWidget *parent)
-    : QWidget(parent)
+    : QMainWindow(parent)
     , ui(new Ui::SignUp)
 {
     ui->setupUi(this);
-    ui->LEUN->setPlaceholderText("Enter Your Username");
-    ui->LEPASS->setPlaceholderText("Enter Your Password");
-    ui->LEEMAIL->setPlaceholderText("Enter Your Email");
+    ui->LEFN->setPlaceholderText("Ex: John Doe");
+    ui->LEEMAIL->setPlaceholderText("Ex: abc@gmail.com");
+    ui->LEPASS->setPlaceholderText("••••••••");
+
 
     sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
-    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/SISS/SISS.db");
+    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
 }
 
 SignUp::~SignUp()
@@ -20,7 +22,7 @@ SignUp::~SignUp()
     delete ui;
 }
 
-void SignUp::on_pushButtonREG_clicked()
+void SignUp::on_PBregister_clicked()
 {
     if (!sqlitedb.open()) {
         qDebug() << "Database is not Connected";
@@ -33,28 +35,29 @@ void SignUp::on_pushButtonREG_clicked()
     // Check if table "LoginUser" exists, create it if it doesn't
     if (!sqlitedb.tables().contains("LoginUser")) {
         QSqlQuery query;
-        QString createTableQuery = "CREATE TABLE LoginUser (username TEXT, password TEXT, email TEXT)";
+        QString createTableQuery = "CREATE TABLE LoginUser (name TEXT, email TEXT, password TEXT)";
         if (!query.exec(createTableQuery)) {
             qDebug() << "Error creating table:" << query.lastError().text();
             return;
         }
     }
 
-    QString username = ui->LEUN->text();
+    QString name = ui->LEFN->text();
     QString password = ui->LEPASS->text();
     QString email = ui->LEEMAIL->text();
 
     QSqlQuery qry;
-    qry.prepare("INSERT INTO LoginUser (username, password, email) VALUES (:username, :password, :email)");
-    qry.bindValue(":username", username);
-    qry.bindValue(":password", password);
+    qry.prepare("INSERT INTO LoginUser (name, email, password) VALUES (:name, :email, :password)");
+    qry.bindValue(":name", name);
     qry.bindValue(":email", email);
+    qry.bindValue(":password", password);
+
 
     if (qry.exec()) {
         QMessageBox::information(this, "Inserted", "Data Inserted Successfully");
         this->hide();
-        MainWindow *mainwindow = new MainWindow();
-        mainwindow->show();
+        LogIn *login = new LogIn();
+        login->show();
     }
     else {
         QMessageBox::information(this, "Not Inserted", "Data Is Not Inserted");
@@ -62,11 +65,11 @@ void SignUp::on_pushButtonREG_clicked()
     }
 }
 
-void SignUp::on_pushButton_clicked()
+
+void SignUp::on_PBlogin_clicked()
 {
     this->hide();
-    MainWindow *mainwindow = new MainWindow();
-    mainwindow->show();
+    LogIn *login = new LogIn();
+    login->show();
 }
-
 

@@ -1,11 +1,13 @@
 <RCC>
     <qresource prefix="/images">
-        <file>7.png</file>
-        <file>1.png</file>
-        <file>2.png</file>
-        <file>3.png</file>
-        <file>4.png</file>
-        <file>5.png</file>
-        <file>6.png</file>
+        <file>images/7.png</file>
+        <file>images/act.png</file>
+        <file>images/home.png</file>
+        <file>images/login.png</file>
+        <file>images/set.png</file>
+        <file>images/signup.png</file>
+        <file>images/ware.png</file>
+        <file>images/1.png</file>
+        <file>images/6.png</file>
     </qresource>
 </RCC>
