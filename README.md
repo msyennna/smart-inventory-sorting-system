@@ -2,6 +2,10 @@
 
 A C++ desktop application built with Qt Widgets and SQLite for managing product records and manually tracking storage-area occupancy.
 
+## Demonstration
+
+[Watch the project demonstration](https://youtu.be/qQrvXCi_u3s)
+
 ## Features represented in the source
 
 - User registration and login.
