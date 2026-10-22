@@ -1,0 +1,30 @@
+{
+	"BUILD_DIR" : "C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/SISS_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS",
+	"CMAKE_SOURCE_DIR" : "C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS",
+	"INCLUDE_DIR" : "C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/SISS_autogen/include",
+	"INPUTS" : 
+	[
+		"C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/images/7.png",
+		"C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/images/6.png",
+		"C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/images/1.png",
+		"C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/images/ware.png",
+		"C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/images/set.png",
+		"C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/images/act.png",
+		"C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/images/login.png",
+		"C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/images/home.png",
+		"C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/images/signup.png"
+	],
+	"LOCK_FILE" : "C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/SISS_autogen.dir/AutoRcc_res_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "--no-zstd", "-name", "res" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_res.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.7.0/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/SISS_autogen.dir/AutoRcc_res_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Users/phoeb/OneDrive/Documents/CCC102 System/SISS/res.qrc",
+	"VERBOSITY" : 0
+}

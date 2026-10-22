@@ -41,7 +41,7 @@ Warehouse::Warehouse(QWidget *parent)
 
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
+    db.setDatabaseName("C:/Qt/SQLiteStudio/SISS.db");
 
     if (!db.open()) {
         // Handle database connection error
@@ -69,7 +69,7 @@ void Warehouse::showNameFromDatabase()
     }
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
+    db.setDatabaseName("C:/Qt/SQLiteStudio/SISS.db");
 
     if (!db.open()) {
         // Handle database connection error
@@ -178,7 +178,7 @@ void Warehouse::fetchDataAndDisplay(const QString& areaName)
 {
     // Establish database connection
     QSqlDatabase sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
-    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
+    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/SISS.db");
 
     if (!sqlitedb.open()) {
         qDebug() << "Error: Connection with database failed";
@@ -217,7 +217,7 @@ void Warehouse::saveData()
         QSqlDatabase::removeDatabase("qt_sql_default_connection");
     }
     QSqlDatabase sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
-    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
+    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/SISS.db");
 
     if (!sqlitedb.open()) {
         qDebug() << "Error: Connection with database failed";

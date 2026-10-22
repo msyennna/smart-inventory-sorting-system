@@ -18,7 +18,7 @@ LogIn::LogIn(QWidget *parent)
     ui->setupUi(this);
 
     sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
-    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
+    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/SISS.db");
 
     ui->lineEditEmail->setPlaceholderText("Enter Your Email");
     ui->lineEditPass->setPlaceholderText("Enter Your Password");

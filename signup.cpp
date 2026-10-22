@@ -14,7 +14,7 @@ SignUp::SignUp(QWidget *parent)
 
 
     sqlitedb = QSqlDatabase::addDatabase("QSQLITE");
-    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
+    sqlitedb.setDatabaseName("C:/Qt/SQLiteStudio/SISS.db");
 }
 
 SignUp::~SignUp()

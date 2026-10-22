@@ -34,7 +34,7 @@ void Home::showNameFromDatabase()
     }
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
+    db.setDatabaseName("C:/Qt/SQLiteStudio/SISS.db");
 
     if (!db.open()) {
         // Handle database connection error

@@ -26,7 +26,7 @@ Activity::Activity(QWidget *parent)
     model->setHorizontalHeaderLabels(QStringList() << "Product" << "Timestamp" << "Fragility" << "Category" << "Size" << "Section" << "Quantity");
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
+    db.setDatabaseName("C:/Qt/SQLiteStudio/SISS.db");
     if (!db.open()) {
         QMessageBox::critical(this, "Error", "Failed to open database.");
         return;
@@ -85,7 +85,7 @@ void Activity::showNameFromDatabase()
     }
 
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("C:/Qt/SQLiteStudio/111FINALSISS.db");
+    db.setDatabaseName("C:/Qt/SQLiteStudio/SISS.db");
 
     if (!db.open()) {
         // Handle database connection error
